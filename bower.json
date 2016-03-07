@@ -2,11 +2,23 @@
   "name": "tchibo",
   "private": true,
   "dependencies": {
-    "modernizr": "~2.8.1",
     "foundation-sites": "^6.2.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
+  },
+  "overrides": {
+    "foundation-sites": {
+      "main": [
+        "scss/util/_util.scss",
+        "scss/_global.scss",
+        "scss/grid/_grid.scss",
+        "scss/typography/_typography.scss",
+        "scss/components/_visibility.scss",
+        "js/foundation.core.js",
+        "js/foundation.util.mediaQuery.js"
+      ]
+    }
   }
 }
