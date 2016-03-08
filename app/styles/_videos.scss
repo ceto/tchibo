@@ -1,0 +1,39 @@
+.videos {
+  background-color: $alert-color;
+  padding:12vh 0;
+}
+
+.movietile {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.movietile__thumb {
+  margin:0 0 1.5rem;
+  display: block;
+}
+.movietile__title {
+  color:$secondary-color;
+  font-size: .875rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin:0 0 .5rem 0;
+  padding:0 1.5rem 0 0;
+
+}
+
+.movietile__lead {
+  color:$primary-color;
+  font-size: .75rem;
+  line-height: 1.25;
+  padding:0 1.5rem 0 0;
+}
+
+.movietile__share {
+  position: absolute;
+  right: 0;
+}
+
+
+.videos__more {
+  margin:1vh 0 0;
+}

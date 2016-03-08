@@ -1,0 +1,66 @@
+.result {
+  padding:0 0 12vh;
+}
+
+.result__head {
+  text-align: center;
+  background-color: $dark-color;
+  padding:.875rem 0;
+  box-shadow: 0 .25rem .5rem -.25rem rgba(#000,.666);
+  margin-bottom: 12vh;
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1;
+    font-family: $lakesight;
+    color:$secondary-color;
+    margin:0;
+    &:before, &:after {
+      content:'\b7';
+      color:$success-color;
+      display: inline-block;
+      margin:0 .333em;
+    }
+  }
+}
+.result__ill {
+  max-width: 20%;
+  float:right;
+  margin:0 0 0 3%;
+  @include breakpoint('medium') {
+    margin:0 0 0 6%;
+  }
+  @include breakpoint('tablet') {
+    max-width: 15%;
+    margin:0 0 0 3%;
+  }
+  @include breakpoint('large') {
+    max-width: 33.333%;
+    margin:0 3% 0 0;
+    float:left;
+  }
+}
+
+.result__title {
+  font-family: $jaapokki;
+  line-height: 1;
+  padding:.5em .875em .333em;
+  background-color: $white;
+  text-transform: uppercase;
+  color:$warning-color;
+  display: inline-block;
+  margin:0 0 1.5em;
+  transform:rotate(-4deg);
+  //transform-origin: bottom left;
+}
+
+.result__save {
+  margin:1rem 0 0 0;
+}
+
+.result__prodhead {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin:0 0 2rem;
+  color:$alert-color;
+
+}

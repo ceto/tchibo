@@ -3,8 +3,17 @@
 @import "bower_components/foundation-sites/scss/_global.scss";
 @import "bower_components/foundation-sites/scss/grid/_grid.scss";
 @import "bower_components/foundation-sites/scss/typography/_typography.scss";
+@import "bower_components/foundation-sites/scss/forms/_forms.scss";
 @import "bower_components/foundation-sites/scss/components/_visibility.scss";
+@import "bower_components/foundation-sites/scss/components/_button.scss";
 // endbower
 
 @import "settings";
 @import "foundmod";
+@import "base";
+@import "header";
+@import "footer";
+@import "products";
+@import "videos";
+@import "thequiz";
+@import "result";

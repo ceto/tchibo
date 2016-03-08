@@ -1,0 +1,75 @@
+html {
+  font-size: 87.5%;
+  @include breakpoint('xxlarge') {
+    font-size: 100%;
+  }
+
+  // @include breakpoint('tablet') {
+  //   font-size: 87.5%;
+  // }
+  // @include breakpoint('large') {
+  //   font-size: 100%;
+  // }
+  // @include breakpoint('xxlarge') {
+  //   font-size: 112.5%;
+  // }
+}
+
+body {
+  //background-image: url('../images/bgpattern.jpg');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+
+  background-image: url('../images/bgpattern.jpg'), linear-gradient(0deg, #732a3d 0%, #5b1b2a 51%, #430c16 100%);
+}
+
+
+.row {
+  @include breakpoint('medium') {
+    max-width: 90%;
+    .row {
+      max-width: $global-width;
+    }
+  }
+  // @include breakpoint('tablet') {
+  //   max-width: 85%;
+  //   .row {
+  //     max-width: $global-width;
+  //   }
+  // }
+  // @include breakpoint('large') {
+  //   max-width: 90%;
+  //   .row {
+  //     max-width: $global-width;
+  //   }
+  // }
+}
+
+
+.button {
+  font-family: $jaapokki;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.lightbg {
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-color: $secondary-color;
+  background-blend-mode: multiply;
+  background-image: url('../images/bgpattern.jpg');
+}
+
+.button {
+  box-shadow: 0 0 2px 0 rgba(#000,.25);
+  &.alert {
+    color:$secondary-color;
+    &:hover, &:focus {
+      background-color: $warning-color;
+      color:$white;
+    }
+  }
+}

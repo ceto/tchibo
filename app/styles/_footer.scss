@@ -1,0 +1,28 @@
+.sitefooter {
+  padding:5vh 0;
+  background-color: $dark-color;
+  text-align: center;
+  box-shadow: 0 -.25rem .5rem -.25rem rgba(#000,.666);
+  color:$warning-color;
+
+  a {
+    color:inherit;
+    &:hover, &:focus {
+      color:$secondary-color;
+    }
+  }
+}
+
+.sitefooter__socials {
+  a {
+    color:$alert-color;
+    font-size: 2rem;
+    line-height: 1;
+    display: inline-block;
+    margin:0 .25em;
+    &:hover, &:focus {
+      //color:$secondary-color;
+    }
+  }
+  margin-bottom: 1rem;
+}

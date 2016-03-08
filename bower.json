@@ -15,7 +15,9 @@
         "scss/_global.scss",
         "scss/grid/_grid.scss",
         "scss/typography/_typography.scss",
+        "scss/forms/_forms.scss",
         "scss/components/_visibility.scss",
+        "scss/components/_button.scss",
         "js/foundation.core.js",
         "js/foundation.util.mediaQuery.js"
       ]
