@@ -1,0 +1,21 @@
+.tophead {
+  background-color: $primary-color;
+  min-height: 6rem;
+  box-shadow: 0 .125rem .25rem -.125rem rgba(#000,.5);
+}
+
+.logobrand {
+  position: absolute;
+  //display: block;
+  width: 5rem;
+  height: 5rem;
+
+  //max-width: 10%;
+}
+.logostylist {
+  position: absolute;
+  display: block;
+  width:16rem;
+  height: 8rem;
+  top: .5rem;
+}

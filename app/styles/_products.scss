@@ -20,6 +20,10 @@
   font-size: 1rem;
   margin:0 0 .25rem;
   min-height: 2rem;
+  color:$secondary-color;
+  .lightbg & {
+    color:$warning-color;
+  }
 }
 
 .producttile__more {

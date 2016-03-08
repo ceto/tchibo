@@ -46,6 +46,10 @@ h3 {
 
 .headmain {
   position: relative;
+  margin-bottom:10vh;
+  @include breakpoint('large') {
+    margin-bottom:0;
+  }
 }
 .headmain__title {
   font-size: 1.125rem;
@@ -61,6 +65,9 @@ h3 {
   font-size: .875rem;
   a {
     color:$alert-color;
+    &:hover, &:focus {
+      color:$warning-color;
+    }
   }
 }
 

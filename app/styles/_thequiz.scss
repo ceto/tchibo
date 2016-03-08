@@ -1,7 +1,12 @@
 .thequiz {
   padding:12vh 0;
 }
-
+.thequiz__heroimg {
+  max-width: 33.333%;
+  @include breakpoint(tablet){
+    max-width: 100%;
+  }
+}
 .thequiz__title {
   font-size: 2.333rem;
   text-transform: uppercase;

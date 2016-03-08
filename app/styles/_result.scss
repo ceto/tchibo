@@ -2,6 +2,24 @@
   padding:0 0 12vh;
 }
 
+.result__content {
+  position: relative;
+  margin-bottom: 5vh;
+  @include breakpoint('large') {
+    margin-bottom: 0;
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      top:4.333rem;
+      bottom:4.333rem;
+      right: -.75rem;
+      width:1px;
+      background-color: rgba($alert-color,.5);
+    }
+
+  }
+}
 .result__head {
   text-align: center;
   background-color: $dark-color;
@@ -27,11 +45,11 @@
   float:right;
   margin:0 0 0 3%;
   @include breakpoint('medium') {
-    margin:0 0 0 6%;
+    max-width:25%;
   }
   @include breakpoint('tablet') {
-    max-width: 15%;
-    margin:0 0 0 3%;
+    max-width:20%;
+    margin:0 0 0 3%
   }
   @include breakpoint('large') {
     max-width: 33.333%;

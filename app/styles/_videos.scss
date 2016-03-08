@@ -4,13 +4,15 @@
 }
 
 .movietile {
+  @include clearfix();
   position: relative;
   margin-bottom: 3rem;
 }
 .movietile__thumb {
-  margin:0 0 1.5rem;
   display: block;
+  margin:0 0 .875rem;
 }
+
 .movietile__title {
   color:$secondary-color;
   font-size: .875rem;
@@ -25,12 +27,12 @@
   color:$primary-color;
   font-size: .75rem;
   line-height: 1.25;
-  padding:0 1.5rem 0 0;
+  margin:0;
 }
 
 .movietile__share {
   position: absolute;
-  right: 0;
+  right:0;
 }
 
 
