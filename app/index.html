@@ -26,7 +26,7 @@
         </div>
         <div class="columns small-9">
           <div class="logostylist">
-            <div class="inner">Tchibo <span>Stylist</span></div>
+          <a href="/"><div class="inner">Tchibo <span>Stylist</span></div></a>
           </div>
         </div>
       </div>
@@ -260,11 +260,6 @@
       </div>
     </section>
 
-
-
-
-
-
     <footer class="sitefooter" role="content-info">
       <div class="row">
         <div class="columns">
@@ -278,31 +273,6 @@
       </div>
     </footer>
 
-    <script>
-        $('#question_content[data-id="1"]').fadeIn();
-
-        $('.answer').on('click', function() {
-            var parentsId = $(this).parents('#question_content').data('id'), thisId = $(this).data("id"), category = ['apple', 'column', 'hour_glass', 'pear'];
-            var self = this;
-            $('.answer').removeClass('green');
-            $(this).addClass('green');
-
-            if( parentsId != 10 ) {
-                setTimeout( function() {
-                    $( $(self).parents('#question_content')).fadeOut(function(){
-                        $( $('#question_content[data-id="'+ (parentsId+1) +'"]')).fadeIn();
-                        $('.question_numbers[data-id="'+ parentsId +'"]').removeClass('active');
-                        $('.question_numbers[data-id="'+ (parentsId+1) +'"]').addClass('active');
-                    });
-                }, 1000);
-            }
-
-            window.communications.ajaxPost('https://fbapp.person.hu/tchibo_stylist/web/answer', {question: parentsId, answer: thisId}, function (cat) {
-                if(category.indexOf(cat) != -1)
-                    window.location.href = 'https://fbapp.person.hu/tchibo_stylist/web/finish/'+cat;
-            });
-        });
-    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

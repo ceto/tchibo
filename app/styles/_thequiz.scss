@@ -41,19 +41,25 @@
   text-align: center;
 }
 .question__block {
-  background-color: $secondary-color;
-
+  //background-color: $secondary-color;
+  background-image: url('../images/question_bg.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
   @include clearfix();
   @include fieldset();
 
   display: none;
-
+  opacity: 0;
+  transition: opacity .4s ease .2s;
   &.active {
     display: block;
+    opacity: 1;
   }
 }
 
 .question {
+  text-transform:uppercase;
   font-size: 1rem;
 
   position: relative;
@@ -100,41 +106,53 @@
   display: block;
 
   margin: 0 0 1.25rem;
-  padding: 0 0 0 3rem;
+
 
   cursor: pointer;
   //transition: all .4s ease;
-  &:before {
-    font-size: 1rem;
-    line-height: 1.9;
 
-    position: absolute;
-    top: 50%;
-    left: 0;
+  label {
+    position: relative;
+    padding: 0 0 0 3rem;
+    line-height: 1.25;
 
-    display: block;
+    display: inline-block;
 
-    width: 1.875em;
-    height: 1.875em;
+    margin: 0;
 
-    content: attr(data-id);
+    cursor: pointer;
     transition: all .2s ease-in;
-    transform: translateY(-50%);
-    text-align: center;
-    text-transform: uppercase;
-
-    border-radius: 50%;
-    background-color: $warning-color;
-  }
-  &:hover {
-    label {
-      //color: $warning-color;
-    }
     &:before {
-      color: $warning-color;
-      background-color: $alert-color;
+      font-size: 1rem;
+      line-height: 1.9;
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      display: block;
+
+      width: 1.875em;
+      height: 1.875em;
+
+      content: attr(data-value);
+      transition: all .2s ease-in;
+      transform: translateY(-50%);
+      text-align: center;
+      text-transform: uppercase;
+
+      border-radius: 50%;
+      background-color: $warning-color;
+    }
+    &:hover, &:focus {
+      &:before {
+        color: $warning-color;
+        background-color: $alert-color;
+      }
     }
   }
+
+
   input[type='radio'] {
     position: absolute;
     left: -9999px;
@@ -142,15 +160,11 @@
     visibility: hidden;
 
     opacity: 0;
-    + label {
-      line-height: 1.25;
-
-      display: inline;
-
-      margin: 0;
-
-      cursor: pointer;
-      transition: all .2s ease-in;
+    &:checked + label {
+      &:before {
+        color: $primary-color;
+        background-color: darken(#e2f54a,18%);
+      }
     }
   }
 }
@@ -162,7 +176,7 @@
 
   width: 50%;
   margin: 0 0 1.5rem 0;
-  padding: 2.5rem 0 0 0;
+
 
   text-align: center;
 
@@ -176,20 +190,25 @@
       clear: none;
     }
   }
-
-  &:before {
-    top: 0;
-    left: 50%;
-
-    transform: translateX(-50%);
-  }
-  label img {
+  label {
+    padding: 2.5rem 0 0 0;
     display: block;
+    &:before {
+      top: 0;
+      left: 50%;
 
-    max-width: 70%;
-    margin: 0 auto .5rem;
+      transform: translateX(-50%);
+    }
+    img {
+      display: block;
+
+      max-width: 70%;
+      margin: 0 auto .5rem;
+    }
   }
 }
+
+
 
 .stations {
   text-align: center;
@@ -204,7 +223,7 @@
     display: inline-block;
     //float:left;
     //padding-left: .075em;
-    margin:0 .75% .75%;
+    margin:0 .875% .875%;
     width: 1.875em;
     height: 1.875em;
 
