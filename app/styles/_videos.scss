@@ -8,9 +8,47 @@
   position: relative;
   margin-bottom: 3rem;
 }
+.movietile__thumbwrap {
+  margin:0 0 1rem;
+  z-index:1;
+}
 .movietile__thumb {
+  position: relative;
   display: block;
-  margin:0 0 .875rem;
+  background-color: #000;
+
+  &:after {
+    content:'';
+    position: absolute;
+    display: block;
+    width:4rem;
+    height: 4rem;
+    left:50%;
+    top:50%;
+    transform:translateY(-50%) translateX(-50%);
+    background-image: url('../images/play.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: .875;
+    transition:all .4s ease;
+  }
+
+  &:hover, &:focus {
+    &:after {
+      opacity:1;
+    }
+    img {
+      opacity:1;
+    }
+  }
+
+  img {
+    transition:all .4s ease;
+    display: block;
+    opacity: .75;
+    backface-visibility: hidden;
+  }
+
 }
 
 .movietile__title {

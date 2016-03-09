@@ -16,6 +16,7 @@
         "scss/grid/_grid.scss",
         "scss/typography/_typography.scss",
         "scss/forms/_forms.scss",
+        "scss/components/_label.scss",
         "scss/components/_visibility.scss",
         "scss/components/_button.scss",
         "js/foundation.core.js",

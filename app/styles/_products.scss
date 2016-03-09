@@ -7,13 +7,14 @@
 
 .producttile__imglink {
   border:1px solid $secondary-color;
-  display: inline-block;
+  display: block;
   padding:1px;
   margin-bottom: .75rem;
   transition: all .4s ease;
   &:hover, &:focus {
     border-color: $warning-color;
   }
+
 }
 
 .producttile__name {

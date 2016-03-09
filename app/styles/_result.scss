@@ -11,7 +11,7 @@
       position: absolute;
       content: '';
       display: block;
-      top:4.333rem;
+      top:5.5rem;
       bottom:4.333rem;
       right: -.75rem;
       width:1px;
@@ -61,14 +61,20 @@
 .result__title {
   font-family: $jaapokki;
   line-height: 1;
-  padding:.5em .875em .333em;
-  background-color: $white;
+  padding:.5em 1em .5em 1em;
   text-transform: uppercase;
   color:$warning-color;
   display: inline-block;
-  margin:0 0 1.5em;
-  transform:rotate(-4deg);
-  //transform-origin: bottom left;
+  margin:0 0 2rem;
+  transform:rotate(-3deg);
+
+  //background-color: $white;
+  //background-color: transparent;
+  background-image:url('../images/flekkmod.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: left bottom;
+  filter: drop-shadow( 1px 1px 4px rgba(#000,.5));
 }
 
 .result__save {
@@ -78,7 +84,7 @@
 .result__prodhead {
   text-transform: uppercase;
   font-size: 1.25rem;
-  margin:0 0 2rem;
+  margin:.75rem 0 2.25rem;
   color:$alert-color;
 
 }

@@ -2,6 +2,10 @@
    padding:12vh 0;
 }
 
+.headstart {
+  text-align: center;
+  overflow: hidden;
+}
 
 .headstart__portrait {
   margin-bottom: 1rem;
@@ -27,17 +31,36 @@
   font-size: .75rem;
   line-height: 1;
   color:$alert-color;
+  display: block;
 }
-
-h3 {
-  margin:1.5rem 0 1rem;
+.headstart h3 {
+  position: relative;
+  margin:2.25rem 0 2.25rem;
   text-transform: uppercase;
   font-size: 1.25rem;
   line-height: 1;
+  position: relative;
+  display: inline-block;
+  &:after, &:before {
+    z-index: -1;
+    content:'';
+    position: absolute;
+    top:45%;
+    width:200%;
+    height:1px;
+    background-color: rgba($alert-color,.75);
+  }
+  &:before {
+    right:120%;
+  }
+  &:after {
+    left:120%;
+  }
 }
 .headstart__ill {
-  max-width: 12rem;
-  margin:0 0 1rem;
+  max-width: 90%;
+  margin:0 auto 1.5rem;
+  display: block;
 }
 
 .headstart__start {
@@ -47,7 +70,7 @@ h3 {
 .headmain {
   position: relative;
   margin-bottom:10vh;
-  @include breakpoint('large') {
+  @include breakpoint('xlarge') {
     margin-bottom:0;
   }
 }
@@ -56,7 +79,7 @@ h3 {
 }
 
 .headmain__videowrap {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .headmain__movie__share {
@@ -80,17 +103,14 @@ h3 {
 }
 
 .headmain__movie__lead {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   font-size: .875rem;
 }
 
-.headstart {
-  text-align: center;
-}
 
 .headsprods {
 
-  @include breakpoint('large') {
+  @include breakpoint('xlarge') {
     .producttile {
       text-align: left;
     }

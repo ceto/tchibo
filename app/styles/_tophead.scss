@@ -1,21 +1,59 @@
 .tophead {
   background-color: $primary-color;
-  min-height: 6rem;
-  box-shadow: 0 .125rem .25rem -.125rem rgba(#000,.5);
+  @include breakpoint(tablet) {
+    min-height: 7rem;
+  }
 }
 
 .logobrand {
   position: absolute;
   //display: block;
-  width: 5rem;
-  height: 5rem;
 
+  width: 4rem;
+  height: 4rem;
   //max-width: 10%;
 }
 .logostylist {
-  position: absolute;
-  display: block;
-  width:16rem;
-  height: 8rem;
-  top: .5rem;
+  @include clearfix();
+  font-family: $jaapokki;
+  font-size: 2rem;
+  line-height: .875;
+
+
+  padding: .5em 0 .333em;
+
+  display: inline-block;
+  margin:0;
+
+  text-transform: uppercase;
+
+  color: $secondary-color;
+  //letter-spacing: .0125em;
+
+  span {
+    //letter-spacing: normal;
+    font-size: 92.5%;
+
+    display: block;
+
+    color: $warning-color;
+  }
+
+  @include breakpoint(tablet) {
+    position: absolute;
+    top: .333em;
+    //background-color: $white;
+    background-image:url('../images/flekk.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow( 3px 3px 3px rgba(#000,.333));
+
+    font-size: 3.25rem;
+    padding: .333em .25em .2em;
+    transform:rotate(-1deg);
+
+    .inner {
+      transform:rotate(-4deg);
+    }
+  }
 }
