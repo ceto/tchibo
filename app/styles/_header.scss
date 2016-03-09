@@ -1,10 +1,11 @@
 .pagehead {
-   padding:12vh 0;
+   padding:5vh 0;
 }
 
 .headstart {
   text-align: center;
   overflow: hidden;
+  padding:5vh 0;
 }
 
 .headstart__portrait {
@@ -69,9 +70,9 @@
 
 .headmain {
   position: relative;
-  margin-bottom:10vh;
+  padding:5vh 0;
   @include breakpoint('xlarge') {
-    margin-bottom:0;
+    //margin-bottom:0;
   }
 }
 .headmain__title {
@@ -80,6 +81,7 @@
 
 .headmain__videowrap {
   margin-bottom: 1.5rem;
+  background-color: #000;
 }
 
 .headmain__movie__share {
@@ -110,7 +112,9 @@
 
 .headsprods {
 
+
   @include breakpoint('xlarge') {
+    padding:5vh 0;
     .producttile {
       text-align: left;
     }

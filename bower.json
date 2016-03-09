@@ -2,7 +2,8 @@
   "name": "tchibo",
   "private": true,
   "dependencies": {
-    "foundation-sites": "^6.2.0"
+    "foundation-sites": "^6.2.0",
+    "jquery.fitvids": "fitvids#^1.1.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -20,7 +21,8 @@
         "scss/components/_visibility.scss",
         "scss/components/_button.scss",
         "js/foundation.core.js",
-        "js/foundation.util.mediaQuery.js"
+        "js/foundation.util.mediaQuery.js",
+        "js/foundation.magellan.js"
       ]
     }
   }

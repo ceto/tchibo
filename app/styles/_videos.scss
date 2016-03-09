@@ -11,6 +11,7 @@
 .movietile__thumbwrap {
   margin:0 0 1rem;
   z-index:1;
+
 }
 .movietile__thumb {
   position: relative;
@@ -29,13 +30,15 @@
     background-image: url('../images/play.png');
     background-repeat: no-repeat;
     background-size: 100%;
-    opacity: .875;
-    transition:all .4s ease;
+    //opacity: 1;
+    //transition:opacity .4s ease;
   }
 
   &:hover, &:focus {
     &:after {
-      opacity:1;
+      //opacity:1;
+      width:4.25rem;
+      height: 4.25rem;
     }
     img {
       opacity:1;

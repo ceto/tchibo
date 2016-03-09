@@ -1,7 +1,7 @@
 html {
-  font-size: 87.5%;
+  //font-size: 87.5%;
   @include breakpoint('xxlarge') {
-    font-size: 100%;
+    //font-size: 112.5%;
   }
 
   // @include breakpoint('tablet') {
