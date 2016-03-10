@@ -4,6 +4,7 @@
           <h3 class="quiz__title">Milyen alkat vagyok?</h3>
           <div class="quiz__instructions"><p>Kattints a válaszod betűjelére, hogy a következő kérdésre léphess!</p></div>
           <div class="questions" id="questions">
+            <form>
             <fieldset class="question__block" data-qid="1">
               <h3 class="question">
                 <span class="question__no">1</span> Melyik állítás jellemző leginkább az alakodra?
@@ -195,20 +196,20 @@
               </h3>
               <ul class="answers">
                 <li class="answer" data-id="a">
-                  <input type="radio" name="q8" id="q8" value="a">
-                  <label data-value="a" for="q8">Laposabb hasat szeretnék, ez az egyetlen testrészem, ami igazán problémás</label>
+                  <input type="radio" name="q8" id="q8a" value="a">
+                  <label data-value="a" for="q8a">Laposabb hasat szeretnék, ez az egyetlen testrészem, ami igazán problémás</label>
                 </li>
                 <li class="answer" data-id="b">
-                  <input type="radio" name="q8" id="q8" value="b">
-                  <label data-value="b" for="q8">Nagyobb melleket szeretnék, hogy ellensúlyozza a fenekemet</label>
+                  <input type="radio" name="q8" id="q8b" value="b">
+                  <label data-value="b" for="q8b">Nagyobb melleket szeretnék, hogy ellensúlyozza a fenekemet</label>
                 </li>
                 <li class="answer" data-id="c">
-                  <input type="radio" name="q8" id="q8" value="c">
-                  <label data-value="c" for="q8">A testem alapvetően arányos, de szívesen megszabadulnék pár centitől a combomon vagy a hasamon</label>
+                  <input type="radio" name="q8" id="q8c" value="c">
+                  <label data-value="c" for="q8c">A testem alapvetően arányos, de szívesen megszabadulnék pár centitől a combomon vagy a hasamon</label>
                 </li>
                 <li class="answer" data-id="d">
-                  <input type="radio" name="q8" id="q8" value="d">
-                  <label data-value="d" for="q8">Örülnék neki, ha általában véve nőiesebb formáim lennének</label>
+                  <input type="radio" name="q8" id="q8d" value="d">
+                  <label data-value="d" for="q8d">Örülnék neki, ha általában véve nőiesebb formáim lennének</label>
                 </li>
               </ul>
             </fieldset>
@@ -218,20 +219,20 @@
               </h3>
               <ul class="answers">
                 <li class="answer" data-id="a">
-                  <input type="radio" name="q9" id="q9" value="a">
-                  <label data-value="a" for="q9">Kedvelem a pasztellszíneket: nem túl élénk, de nem is hétköznapi</label>
+                  <input type="radio" name="q9" id="q9a" value="a">
+                  <label data-value="a" for="q9a">Kedvelem a pasztellszíneket: nem túl élénk, de nem is hétköznapi</label>
                 </li>
                 <li class="answer" data-id="b">
-                  <input type="radio" name="q9" id="q9" value="b">
-                  <label data-value="b" for="q9">Minták, színek, minden jöhet, csak élénk legyen</label>
+                  <input type="radio" name="q9" id="q9b" value="b">
+                  <label data-value="b" for="q9b">Minták, színek, minden jöhet, csak élénk legyen</label>
                 </li>
                 <li class="answer" data-id="c">
-                  <input type="radio" name="q9" id="q9" value="c">
-                  <label data-value="c" for="q9">Nem igazán hordok nagyon színes ruhákat, inkább csak feketét, fehéret és szürkét</label>
+                  <input type="radio" name="q9" id="q9c" value="c">
+                  <label data-value="c" for="q9c">Nem igazán hordok nagyon színes ruhákat, inkább csak feketét, fehéret és szürkét</label>
                 </li>
                 <li class="answer" data-id="d">
-                  <input type="radio" name="q9" id="q9" value="d">
-                  <label data-value="d" for="q9">Van néhány kifejezetten extrém színű vagy mintájú darabom, ezeken kívül inkább visszafogottabb, nem annyira élénk színeket hordok</label>
+                  <input type="radio" name="q9" id="q9d" value="d">
+                  <label data-value="d" for="q9d">Van néhány kifejezetten extrém színű vagy mintájú darabom, ezeken kívül inkább visszafogottabb, nem annyira élénk színeket hordok</label>
                 </li>
               </ul>
             </fieldset>
@@ -241,23 +242,24 @@
               </h3>
               <ul class="answers">
                 <li class="answer" data-id="a">
-                  <input type="radio" name="q10" id="q10" value="a">
-                  <label data-value="a" for="q10">Azok a cikkek, amelyek a legújabb divattrendeket mutatják be</label>
+                  <input type="radio" name="q10" id="q10a" value="a">
+                  <label data-value="a" for="q10a">Azok a cikkek, amelyek a legújabb divattrendeket mutatják be</label>
                 </li>
                 <li class="answer" data-id="b">
-                  <input type="radio" name="q10" id="q10" value="b">
-                  <label data-value="b" for="q10">A hírességek outfitjeit bemutató oldalak</label>
+                  <input type="radio" name="q10" id="q10b" value="b">
+                  <label data-value="b" for="q10b">A hírességek outfitjeit bemutató oldalak</label>
                 </li>
                 <li class="answer" data-id="c">
-                  <input type="radio" name="q10" id="q10" value="c">
-                  <label data-value="c" for="q10">Az áruházi körképek, amikor bemutatnak 10-15 terméket, és rögtön látom, hogy hol tudom megvenni, ami tetszik</label>
+                  <input type="radio" name="q10" id="q10c" value="c">
+                  <label data-value="c" for="q10c">Az áruházi körképek, amikor bemutatnak 10-15 terméket, és rögtön látom, hogy hol tudom megvenni, ami tetszik</label>
                 </li>
                 <li class="answer" data-id="d">
-                  <input type="radio" name="q10" id="q10" value="d">
-                  <label data-value="d" for="q10">A divatfotó-sorozatok</label>
+                  <input type="radio" name="q10" id="q10d" value="d">
+                  <label data-value="d" for="q10d">A divatfotó-sorozatok</label>
                 </li>
               </ul>
             </fieldset>
+            </form>
           </div>
           <nav class="stations">
             <a href="#" data-qid="1">1</a>
