@@ -10430,7 +10430,7 @@ function hyphenate(str) {
 
 }(jQuery);
 
-'use strict';
+// 'use strict';
 
 !function($) {
 
