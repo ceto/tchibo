@@ -33,6 +33,9 @@
   line-height: 1;
   color:$alert-color;
   display: block;
+  &:hover, &:focus {
+    color:$warning-color;
+  }
 }
 .headstart h3 {
   position: relative;

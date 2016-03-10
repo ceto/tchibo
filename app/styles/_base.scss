@@ -13,6 +13,10 @@ html {
   // @include breakpoint('xxlarge') {
   //   font-size: 112.5%;
   // }
+
+  @include breakpoint('xxxlarge') {
+    font-size: 112.5%;
+  }
 }
 
 body {
@@ -45,6 +49,10 @@ body {
   //     max-width: $global-width;
   //   }
   // }
+
+  @include breakpoint('xxxlarge') {
+    max-width: 85rem;
+  }
 }
 
 .shadowed {

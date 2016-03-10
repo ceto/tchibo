@@ -20,9 +20,7 @@
         "scss/components/_label.scss",
         "scss/components/_visibility.scss",
         "scss/components/_button.scss",
-        "js/foundation.core.js",
-        "js/foundation.util.mediaQuery.js",
-        "js/foundation.magellan.js"
+        "dist/foundation.js"
       ]
     }
   }

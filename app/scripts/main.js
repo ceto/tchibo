@@ -3,6 +3,10 @@ $(document).foundation();
 
 $(document).ready(function(){
 
+  $('.menutoggle').click(function(e) {
+    $('.itemstohide').toggleClass('show');
+  });
+
   $('.headmain__videowrap').fitVids();
 
   $('.movietile__thumb').click(function(e) {

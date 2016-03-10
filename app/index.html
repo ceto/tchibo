@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     <title>tchibo</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -20,14 +21,29 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <header class="tophead">
-      <div class="row">
-        <div class="columns small-3 text-center">
-          <img src="http://placehold.it/320x320/?text/Tchibo" alt="Tchibo" class="logobrand">
+      <div class="row collapse large-uncollapse">
+        <div class="columns large-3 show-for-large text-center">
+          <img src="images/mobiltchibo.jpg" alt="Tchibo" class="logobrand">
         </div>
-        <div class="columns small-9">
+        <div class="columns large-2">
+          <img src="images/minitchibo3.jpg" alt="Tchibo" class="mobiltchibo">
           <div class="logostylist">
-          <a href="/"><div class="inner">Tchibo <span>Stylist</span></div></a>
+            <a href="/"><div class="inner">Tchibo <span>Stylist</span></div></a>
           </div>
+          <a href="#" class="menutoggle hide-for-large"><i class="icon icon--hamburger"></i></a>
+        </div>
+        <div class="columns large-7">
+          <div class="itemstohide show">
+            <div class="tophead__socials">
+              <a href="#"><i class="icon icon--insta"></i></a> <a href="#"><i class="icon icon--fb"></i></a> <a href="#"><i class="icon icon--coffee"></i></a>
+            </div>
+            <ul class="menu sitemenu" data-magellan data-threshold="0">
+              <li><a href="#videos">Videók</a></li>
+              <li><a href="#thequiz">Alkat Teszt</a></li>
+              <li class="user"><a href="login.html"><i class="icon icon--user"></i> Belépés/Regisztráció</a></li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </header>
@@ -191,9 +207,7 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/what-input/what-input.js"></script>
-    <script src="/bower_components/foundation-sites/js/foundation.core.js"></script>
-    <script src="/bower_components/foundation-sites/js/foundation.util.mediaQuery.js"></script>
-    <script src="/bower_components/foundation-sites/js/foundation.magellan.js"></script>
+    <script src="/bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="/bower_components/jquery.fitvids/jquery.fitvids.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
