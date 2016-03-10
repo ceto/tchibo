@@ -73,6 +73,7 @@
 
 .headmain {
   position: relative;
+  overflow:hidden;
   padding:5vh 0;
   @include breakpoint('xlarge') {
     //margin-bottom:0;

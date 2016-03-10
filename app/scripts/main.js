@@ -4,7 +4,12 @@ $(document).foundation();
 $(document).ready(function(){
 
   $('.menutoggle').click(function(e) {
+    e.preventDefault();
     $('.itemstohide').toggleClass('show');
+  });
+  $('.coke').click(function(e) {
+    e.preventDefault();
+    $('.cookieblock').remove();
   });
 
   $('.headmain__videowrap').fitVids();
@@ -34,7 +39,7 @@ $(document).ready(function(){
       var qId = $(this).parents('.question__block').data('qid');
       var qValue = $(this).attr('value');
       var self = this;
-      if( qId != 3 ) {
+      if( qId != 10 ) {
         //$(self).parents('.question__block').css('opacity','0');
         setTimeout(function(){
           $('.question__block[data-qid="'+(qId+1)+'"]').addClass('active');

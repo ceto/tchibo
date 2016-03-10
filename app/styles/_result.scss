@@ -36,6 +36,7 @@
     font-size: 1.5rem;
     line-height: 1;
     font-family: $lakesight;
+    font-weight: normal;
     color:$secondary-color;
     margin:0;
     &:before, &:after {
@@ -69,6 +70,7 @@
   position: relative;
   font-family: $jaapokki;
   line-height: 1;
+  font-weight:normal;
   padding:.5em 1em .5em 1em;
   text-transform: uppercase;
   color:$warning-color;

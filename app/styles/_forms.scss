@@ -1,0 +1,11 @@
+.loginform {
+  padding:12vh 0;
+}
+.formheading {
+  text-transform: uppercase;
+}
+
+.is-invalid-input:not(:focus) {
+  background-color: rgba($secondary-color, .875);
+  border-color: $alert-color;
+}

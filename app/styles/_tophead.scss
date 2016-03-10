@@ -29,6 +29,7 @@
 .logostylist {
   @include clearfix();
   font-family: $jaapokki;
+  font-weight:normal;
   font-size: 1.75rem;
   line-height: .875;
 
