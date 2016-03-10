@@ -18,7 +18,12 @@
       width:1px;
       background-color: rgba($alert-color,.5);
     }
+  }
 
+  .lightbg & {
+    p {
+      text-shadow:0 0 .333em rgba($primary-color,.5);
+    }
   }
 }
 .result__head {
@@ -59,7 +64,9 @@
   }
 }
 
+
 .result__title {
+  position: relative;
   font-family: $jaapokki;
   line-height: 1;
   padding:.5em 1em .5em 1em;
@@ -68,6 +75,7 @@
   display: inline-block;
   margin:0 0 2rem;
   transform:rotate(-3deg);
+  max-width:63%;
 
   //background-color: $white;
   //background-color: transparent;
@@ -75,8 +83,39 @@
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: left bottom;
-  filter: drop-shadow( 1px 1px 4px rgba(#000,.5));
+  filter: drop-shadow( 1px 1px 4px rgba(#000,.333));
+
+  &:after {
+    content:'';
+    position: absolute;
+    z-index: 1;
+    top:-.9em;
+    left:-.5em;
+    display: block;
+    width: 1.6em;
+    height: 1.6em;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: left top;
+  }
 }
+
+.result__title--alma:after {
+ background-image: url('../images/ikon_alma.png');
+}
+
+.result__title--korte:after  {
+ background-image: url('../images/ikon_korte.png');
+}
+
+.result__title--oszlop:after  {
+ background-image: url('../images/ikon_oszlop.png');
+}
+
+.result__title--homokora:after  {
+ background-image: url('../images/ikon_homokora.png');
+}
+
 
 .result__save {
   margin:1rem 0 0 0;

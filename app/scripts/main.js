@@ -8,6 +8,14 @@ $(document).ready(function(){
   $('.movietile__thumb').click(function(e) {
     e.preventDefault();
     $('.headmain__videowrap iframe').attr('src', $(this).attr('href'));
+    $('.headmain__movie__title').text($(this).parents('.movietile').find('.movietile__title').text());
+    $('.headmain__movie__lead').text($(this).parents('.movietile').find('.movietile__lead').text());
+    $('.headmain__movie__share a').attr('href', $(this).parents('.movietile').find('.movietile__share a').attr('href'));
+    // A fővideó mellet lévő temékek cseréje itt kezdeményezhető
+
+    //URL frissítés kidolgozandó
+    history.pushState(null, null, $(this).data('slug'));
+
     $('.pagehead').foundation('scrollToLoc', '#headmain');
   });
 
@@ -22,7 +30,7 @@ $(document).ready(function(){
       var qId = $(this).parents('.question__block').data('qid');
       var qValue = $(this).attr('value');
       var self = this;
-      if( qId != 10 ) {
+      if( qId != 3 ) {
         //$(self).parents('.question__block').css('opacity','0');
         setTimeout(function(){
           $('.question__block[data-qid="'+(qId+1)+'"]').addClass('active');
@@ -33,7 +41,18 @@ $(document).ready(function(){
         },400);
 
       } else {
-        alert('Vége. itt van az ajax POST');
+
+        $(self).parents('.question__block').removeClass('active');
+        $('.stations a[data-qid="'+ (qId) +'"]').removeClass('active');
+        //alert('Itt van az ajax POST. Most dobok egy eredményt');
+
+        $('#thequiz').removeClass('jollathato');
+        setTimeout(function(){
+          $('#thequiz').addClass('jollathato');
+          $( '#thequiz' ).load( 'alma.html' + ' #result', function() {
+            $('.pagehead').foundation('scrollToLoc', '#thequiz');
+        })}, 400);
+
       }
     });
 
@@ -48,6 +67,9 @@ $(document).ready(function(){
         $('#thequiz').addClass('jollathato');
         $('.pagehead').foundation('scrollToLoc', '#thequiz');
         klikkelo();
+        ///opcionális
+        //history.pushState(null, null, 'kviz');
+
       })}, 200);
 
   });

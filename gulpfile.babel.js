@@ -162,6 +162,20 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
+gulp.task('gh-pages', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
+
+gulp.task('deploy', ['clean', 'build', 'gh-pages'], () => {
+  return true
+});
+
+
+
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
 });
+
+

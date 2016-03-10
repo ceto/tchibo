@@ -1,11 +1,14 @@
 .thequiz {
-  padding: 12vh 0;
+
   opacity: 0;
   transition: opacity .2s ease;
   &.jollathato {
     opacity:1;
-    //transition: opacity .4s ease-out;
   }
+}
+
+.quizstarter {
+  padding: 12vh 0;
 }
 .thequiz__heroimg {
   max-width: 33.333%;
@@ -28,7 +31,7 @@
 }
 
 .quiz {
-
+  padding: 12vh 0;
 }
 
 .quiz__title {
@@ -36,6 +39,8 @@
   text-transform:uppercase;
   margin-bottom:.5rem;
 }
+
+
 .quiz__instructions {
   color:$warning-color;
   text-align: center;
@@ -161,6 +166,7 @@
 
     opacity: 0;
     &:checked + label {
+      color: $warning-color;
       &:before {
         color: $primary-color;
         background-color: darken(#e2f54a,18%);
