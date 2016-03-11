@@ -21,21 +21,33 @@ $(document).ready(function(){
     $('.headmain__movie__lead').text($(this).parents('.movietile').find('.movietile__lead').text());
     $('.headmain__movie__share a').attr('href', $(this).parents('.movietile').find('.movietile__share a').attr('href'));
     // A fővideó mellet lévő temékek cseréje itt kezdeményezhető
-
     //URL frissítés kidolgozandó
     history.pushState(null, null, $(this).data('slug'));
-
     $('.pagehead').foundation('scrollToLoc', '#headmain');
   });
 
 
+  function quizstarter() {
+    $('#thequiz__start').on('click', function(e) {
+      e.preventDefault();
+      $('#thequiz').removeClass('jollathato');
+      setTimeout(function(){
+        $( '#thequiz' ).load( $('#thequiz__start').attr('href') + ' #quiz', function() {
+          $('#thequiz').addClass('jollathato');
+          $('.pagehead').foundation('scrollToLoc', '#thequiz');
+          klikkelo();
+          ///opcionális
+          //history.pushState(null, null, 'kviz');
+        })}, 200);
+    });
+  };
 
   function klikkelo() {
     $('.stations a').on('click', function(e) {e.preventDefault();});
     $('.question__block[data-qid="1"]').addClass('active');
     $('.stations a[data-qid="1"]').addClass('active');
 
-     $('.answer input[type="radio"]').on('change', function() {
+    $('.answer input[type="radio"]').on('change', function() {
       var qId = $(this).parents('.question__block').data('qid');
       var qValue = $(this).attr('value');
       var self = this;
@@ -50,41 +62,18 @@ $(document).ready(function(){
         },400);
 
       } else {
-
         $(self).parents('.question__block').removeClass('active');
         $('.stations a[data-qid="'+ (qId) +'"]').removeClass('active');
         //alert('Itt van az ajax POST. Most dobok egy eredményt');
         $( '#thequiz' ).load( 'quizstarter.html');
         setTimeout(function(){
-
-          $('#result__homokora').addClass('winner');
-          $('.pagehead').foundation('scrollToLoc', '#result__homokora');
+          $('#result__korte').addClass('winner');
+          $('.pagehead').foundation('scrollToLoc', '#result__korte');
+          quizstarter();
         }, 400);
-
       }
     });
-
-  }
-
-  $('#thequiz__start').click(function(e) {
-    e.preventDefault();
-    $('#thequiz').removeClass('jollathato');
-
-    setTimeout(function(){
-      $( '#thequiz' ).load( $('#thequiz__start').attr('href') + ' #quiz', function() {
-        $('#thequiz').addClass('jollathato');
-        $('.pagehead').foundation('scrollToLoc', '#thequiz');
-        klikkelo();
-        ///opcionális
-        //history.pushState(null, null, 'kviz');
-
-      })}, 200);
-
-  });
-
-
-
-
-
+  };
+  quizstarter();
 
 });
