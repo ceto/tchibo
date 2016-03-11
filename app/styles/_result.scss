@@ -1,6 +1,18 @@
 .result {
-  padding:0 0 12vh;
-  //display: none;
+  padding:12vh 0 12vh;
+  position:relative;
+  &.winner {
+   padding-top:16vh;
+
+    
+  }
+}
+
+.result__content .button {
+  display:none;
+  .winner &{
+     display:inline-block;
+  }
 }
 
 .result__content {
@@ -27,11 +39,19 @@
   }
 }
 .result__head {
+  display:none;
   text-align: center;
   background-color: $dark-color;
   padding:.875rem 0;
   box-shadow: 0 .25rem .5rem -.25rem rgba(#000,.666);
-  margin-bottom: 12vh;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  .winner & {
+    display:block;
+  }
+
   h2 {
     font-size: 1.5rem;
     line-height: 1;

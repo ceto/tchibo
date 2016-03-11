@@ -39,7 +39,7 @@ $(document).ready(function(){
       var qId = $(this).parents('.question__block').data('qid');
       var qValue = $(this).attr('value');
       var self = this;
-      if( qId != 10 ) {
+      if( qId != 3 ) {
         //$(self).parents('.question__block').css('opacity','0');
         setTimeout(function(){
           $('.question__block[data-qid="'+(qId+1)+'"]').addClass('active');
@@ -54,13 +54,12 @@ $(document).ready(function(){
         $(self).parents('.question__block').removeClass('active');
         $('.stations a[data-qid="'+ (qId) +'"]').removeClass('active');
         //alert('Itt van az ajax POST. Most dobok egy eredményt');
-
-        $('#thequiz').removeClass('jollathato');
+        $( '#thequiz' ).load( 'quizstarter.html');
         setTimeout(function(){
-          $('#thequiz').addClass('jollathato');
-          $( '#thequiz' ).load( 'alma.html' + ' #result', function() {
-            $('.pagehead').foundation('scrollToLoc', '#thequiz');
-        })}, 400);
+
+          $('#result__homokora').addClass('winner');
+          $('.pagehead').foundation('scrollToLoc', '#result__homokora');
+        }, 400);
 
       }
     });
