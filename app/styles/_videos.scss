@@ -1,9 +1,18 @@
 .videos {
   padding: 12vh 0;
-
   background-color: $alert-color;
 }
 
+.movies__item {
+  &:nth-child(n+5) {
+    display: none;
+    .showallvideo & {
+      display: block;
+    }
+  }
+
+
+}
 .movietile {
   position: relative;
 
@@ -28,6 +37,7 @@
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: left top;
+    background-overflow: visible;
   }
 }
 .movietile__thumbwrap {

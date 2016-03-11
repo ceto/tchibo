@@ -3,6 +3,7 @@
 }
 
 .headstart {
+  position: relative;
   text-align: center;
   overflow: hidden;
   padding:5vh 0;
@@ -35,6 +36,44 @@
   display: block;
   &:hover, &:focus {
     color:$warning-color;
+  }
+}
+
+.lilla {
+  @include clearfix();
+  position: absolute;
+  //width:140%;
+  opacity: 0;
+  top:-.5rem;
+  left:-20%;
+  right::-20%;
+  z-index: 1;
+  pointer-events:none;
+  //width: 125%;
+  background-image: url('../images/postit.png');
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  padding:3rem 23% 3.5rem 23%;
+  color:$warning-color;
+  transition:opacity .4s ease;
+  &.show {
+    opacity:1;
+    pointer-events:auto;
+
+  }
+  p {
+    font-size: .75rem;
+    margin:0 auto;
+  }
+}
+.lillaclose {
+  position: absolute;
+  right:20%;
+  top:3rem;
+  font-size: .875rem;
+  color:$warning-color;
+  &:hover, &.focus {
+    color:$secondary-color;
   }
 }
 .headstart h3 {

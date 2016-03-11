@@ -12,6 +12,23 @@ $(document).ready(function(){
     $('.cookieblock').remove();
   });
 
+  $('.lillaopen').click(function(e) {
+    e.preventDefault();
+    $('.lilla').addClass('show');
+  });
+  $('.lillaclose').click(function(e) {
+    e.preventDefault();
+    $('.lilla').removeClass('show');
+  });
+
+  $('.videos__more').click(function(e) {
+    e.preventDefault();
+    $('.videos').toggleClass('showallvideo');
+    $('.pagehead').foundation('scrollToLoc', '#videos');
+  });
+
+
+
   $('.headmain__videowrap').fitVids();
 
   $('.movietile__thumb').click(function(e) {
@@ -51,7 +68,7 @@ $(document).ready(function(){
       var qId = $(this).parents('.question__block').data('qid');
       var qValue = $(this).attr('value');
       var self = this;
-      if( qId != 3 ) {
+      if( qId != 10 ) {
         //$(self).parents('.question__block').css('opacity','0');
         setTimeout(function(){
           $('.question__block[data-qid="'+(qId+1)+'"]').addClass('active');
@@ -64,13 +81,16 @@ $(document).ready(function(){
       } else {
         $(self).parents('.question__block').removeClass('active');
         $('.stations a[data-qid="'+ (qId) +'"]').removeClass('active');
-        //alert('Itt van az ajax POST. Most dobok egy eredményt');
         $( '#thequiz' ).load( 'quizstarter.html');
+        //alert('Ide kell egy ajax POST.');
+        //AJAX POST eredménye alapján az alapján a stuszállítás kicsit késleltetve
         setTimeout(function(){
+          $('.result').removeClass('winner');
           $('#result__korte').addClass('winner');
           $('.pagehead').foundation('scrollToLoc', '#result__korte');
           quizstarter();
         }, 400);
+
       }
     });
   };
