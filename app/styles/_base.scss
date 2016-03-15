@@ -25,6 +25,7 @@ body {
   background-repeat: repeat-x;
   background-attachment: fixed;
   //background-blend-mode: multiply;
+  background-color: $primary-color;
 
   background-image: linear-gradient(0deg, rgba(#732a3d,.5) 0%, rgba(#5b1b2a,.5) 51%, rgba(#430c16,.5) 100%), url('../images/bg_h800.jpg') ;
 
