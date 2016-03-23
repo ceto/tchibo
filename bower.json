@@ -20,6 +20,8 @@
         "scss/components/_label.scss",
         "scss/components/_visibility.scss",
         "scss/components/_button.scss",
+        "scss/components/_close-button.scss",
+        "scss/components/_reveal.scss",
         "dist/foundation.js"
       ]
     }

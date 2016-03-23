@@ -9,3 +9,17 @@
   background-color: rgba($secondary-color, .875);
   border-color: $alert-color;
 }
+
+.reveal {
+  color: $warning-color;
+  text-align: center;
+  h5 {
+    margin-bottom: .5em;
+  }
+  .button {
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+}
