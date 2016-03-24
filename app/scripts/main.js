@@ -7,6 +7,10 @@ $(document).ready(function(){
     e.preventDefault();
     $('.itemstohide').toggleClass('show');
   });
+  $('.itemstohide a').click(function(e) {
+    $('.itemstohide').removeClass('show');
+  });
+
   $('.coke').click(function(e) {
     e.preventDefault();
     $('.cookieblock').remove();
@@ -55,7 +59,7 @@ $(document).ready(function(){
           klikkelo();
           ///opcionális
           //history.pushState(null, null, 'kviz');
-        })}, 200);
+        })}, 800);
     });
   };
 
@@ -68,19 +72,29 @@ $(document).ready(function(){
       var qId = $(this).parents('.question__block').data('qid');
       var qValue = $(this).attr('value');
       var self = this;
+
+
       if( qId != 10 ) {
-        //$(self).parents('.question__block').css('opacity','0');
+
         setTimeout(function(){
-          $('.question__block[data-qid="'+(qId+1)+'"]').addClass('active');
-          $('.stations a[data-qid="'+ (qId+1) +'"]').addClass('active');
-          $(self).parents('.question__block').removeClass('active');
-          $('.stations a[data-qid="'+ (qId) +'"]').removeClass('active');
+          $(self).parents('.question__block').fadeOut( 400, function() {
+            $(self).parents('.question__block').removeClass('active');
+            $('.stations a[data-qid="'+ (qId) +'"]').removeClass('active');
+            $('.question__block[data-qid="'+(qId+1)+'"]').addClass('active');
+            $('.stations a[data-qid="'+ (qId+1) +'"]').addClass('active');
+          });
 
         },400);
 
       } else {
-        $(self).parents('.question__block').removeClass('active');
-        $('.stations a[data-qid="'+ (qId) +'"]').removeClass('active');
+
+        setTimeout(function(){
+          $(self).parents('.question__block').fadeOut( 400, function() {
+            $(self).parents('.question__block').removeClass('active');
+            $('.stations a[data-qid="'+ (qId) +'"]').removeClass('active');
+          });
+        },400);
+
         $( '#thequiz' ).load( 'quizstarter.html');
         //alert('Ide kell egy ajax POST.');
         //AJAX POST eredménye alapján az alapján a stuszállítás kicsit késleltetve
@@ -89,7 +103,7 @@ $(document).ready(function(){
           $('#result__korte').addClass('winner');
           $('.pagehead').foundation('scrollToLoc', '#result__korte');
           quizstarter();
-        }, 400);
+        }, 1000);
 
       }
     });

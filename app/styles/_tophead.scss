@@ -2,7 +2,7 @@
   @include clearfix();
   position: relative;
   background-color: $primary-color;
-  @include breakpoint(tablet) {
+  @include breakpoint(small) {
     position: fixed;
     top:0;
     left:0;
