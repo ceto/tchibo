@@ -45,7 +45,7 @@
   position: absolute;
   //width:140%;
   opacity: 0;
-  top:-.7rem;
+  top:-.5666rem;
   left:-20%;
   right::-20%;
   z-index: 1;
@@ -61,6 +61,9 @@
     opacity:1;
     pointer-events:auto;
 
+  }
+  img {
+    max-width: 6rem;
   }
   p {
     font-size: .75rem;
