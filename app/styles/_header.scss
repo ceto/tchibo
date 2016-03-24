@@ -15,6 +15,7 @@
 }
 .headstart__titulus {
   text-transform: uppercase;
+  letter-spacing:.0875em;
   font-size: .75rem;
   line-height: 1;
   display: block;
@@ -44,7 +45,7 @@
   position: absolute;
   //width:140%;
   opacity: 0;
-  top:-.5rem;
+  top:-.7rem;
   left:-20%;
   right::-20%;
   z-index: 1;
@@ -120,6 +121,8 @@
 }
 .headmain__title {
   font-size: 1.125rem;
+  line-height:1.375;
+  letter-spacing: .0.875em;
 }
 
 .headmain__videowrap {
@@ -145,6 +148,7 @@
 
 .headmain__movie__title {
   font-size:1.25rem;
+  letter-spacing:.0875em;
   color:$secondary-color;
   text-transform: uppercase;
   margin:0 0 .125rem;

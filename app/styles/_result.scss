@@ -34,6 +34,10 @@
     }
   }
 
+  p{ 
+    letter-spacing:.075em;
+  }
+
   .lightbg & {
     p {
       text-shadow:0 0 .333em rgba($primary-color,.5);
@@ -93,6 +97,7 @@
   font-family: $jaapokki;
   line-height: 1;
   font-weight:normal;
+  letter-spacing:.075em;
   padding:.5em 1em .5em 1em;
   text-transform: uppercase;
   color:$warning-color;
@@ -150,5 +155,6 @@
   font-size: 1.25rem;
   margin:.75rem 0 2.25rem;
   color:$alert-color;
+  letter-spacing:.0875em;
 
 }

@@ -22,6 +22,7 @@
   margin:0 0 .25rem;
   min-height: 2rem;
   color:$secondary-color;
+  letter-spacing:.075em;
   .lightbg & {
     color:$warning-color;
   }
@@ -31,6 +32,7 @@
   font-size: .875rem;
   line-height: 1;
   color:$success-color;
+  white-space:nowrap;
   &:before {
     content:'» '
   }
