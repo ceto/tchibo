@@ -10,8 +10,9 @@
 }
 
 .headstart__portrait {
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
   max-width: 6rem;
+  display: block;
 }
 .headstart__titulus {
   text-transform: uppercase;
@@ -43,12 +44,13 @@
 .lilla {
   @include clearfix();
   position: absolute;
-  //width:140%;
+  width:140%;
   opacity: 0;
-  top:-.5666rem;
+  //top:-3.25vh;
   left:-20%;
   right::-20%;
   z-index: 1;
+  transform:translateY(-3rem);
   pointer-events:none;
   //width: 125%;
   background-image: url('../images/postit.png');
@@ -56,7 +58,7 @@
   background-size:100% 100%;
   padding:3rem 23% 3.5rem 23%;
   color:$warning-color;
-  transition:opacity .4s ease;
+  transition:opacity .3s ease;
   &.show {
     opacity:1;
     pointer-events:auto;
@@ -64,6 +66,8 @@
   }
   img {
     max-width: 6rem;
+    display: block;
+    margin: 0 auto 1rem;
   }
   p {
     font-size: .75rem;
