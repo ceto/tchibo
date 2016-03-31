@@ -6,7 +6,10 @@
   position: relative;
   text-align: center;
   overflow: hidden;
-  padding:5vh 0;
+  padding:2rem 0 0;
+  @include breakpoint(large) {
+    padding:5vh 0;
+  }
 }
 
 .headstart__portrait {
@@ -159,7 +162,7 @@
   color:$secondary-color;
   text-transform: uppercase;
   margin:0 0 .125rem;
-  padding-right: 5rem;
+  padding-right: 7.5rem;
 }
 
 .headmain__movie__lead {

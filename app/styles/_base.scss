@@ -34,12 +34,6 @@ body {
       background-image: linear-gradient(0deg, rgba(#732a3d,.5) 0%, rgba(#5b1b2a,.5) 51%, rgba(#430c16,.5) 100%), url('../images/bg_mobile.jpg') ;
   }
   letter-spacing: .075em;
-  @include breakpoint(small) {
-    padding-top: 4rem;
-  }
-  @include breakpoint(large) {
-    padding-top: 7.125rem;
-  }
 }
 
 p {

@@ -2,6 +2,10 @@
   @include clearfix();
   text-align: center;
   margin:0 0 2rem;
+  //.resultprods__item & {
+  //  max-width:9rem;
+  //  margin:0 auto 2rem;
+  //}
 }
 
 
@@ -9,16 +13,20 @@
   border:1px solid $secondary-color;
   display: block;
   padding:1px;
-  margin-bottom: .75rem;
+  margin:0 auto .75rem;
   transition: all .4s ease;
   &:hover, &:focus {
     border-color: $warning-color;
+  }
+  img {
+    display:block;
+    margin:0 auto;
   }
 
 }
 
 .producttile__name {
-  font-size: 1rem;
+  font-size: .875rem;
   margin:0 0 .25rem;
   min-height: 2rem;
   color:$secondary-color;

@@ -13,13 +13,23 @@
     margin:0;
   }
   .button {
+    clear:right;
     float:right;
-    margin: 0 0 0 6%;
+    margin: 1em 0 0 6%;
+    @include breakpoint(tablet) {
+      clear:none;
+      margin: 0 0 0 6%;
+    }
   }
   .cmore {
+    max-width:25%;
+    text-align:right;
     float:right;
     color:$white;
-    margin: .5rem 0 0 2%;
+    margin: 0 0 0 2%;
     text-decoration:underline;
+    @include breakpoint(tablet) {
+      margin: .5rem 0 0 2%;
+    }
   }
 }

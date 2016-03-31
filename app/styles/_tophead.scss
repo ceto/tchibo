@@ -2,13 +2,14 @@
   @include clearfix();
   position: relative;
   background-color: $primary-color;
+  //box-shadow: 0 .25rem .5rem -.25rem rgba(#000,.666);
   @include breakpoint(small) {
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    box-shadow: 0 .25rem .5rem -.25rem rgba(#000,.666);
+    //position: fixed;
+    //top:0;
+    //left:0;
+    //width:100%;
+    //z-index:1000;
+    
   }
 }
 
@@ -149,19 +150,20 @@
   > li {
     margin:0;
     padding: 0;
-    font-size: 1.5rem;
+    font-size: 1.333rem;
     line-height: 1;
     display: block;
     @include breakpoint(large) {
       display: inline-block;
-      font-size: 1.125rem;
+      font-size: .875rem;
       line-height: 1;
     }
     &.user {
-      font-size: .875rem;
-      padding-left: .75rem;
+      //font-size: .875rem;
+      //padding-left: .75rem;
       > a {
-        padding: 1.25em 1em .5em 2.25em;
+        //padding: 1.25em 1em .5em 2.25em;
+        padding-left:1.75em;
       }
     }
 
@@ -176,10 +178,10 @@
 
       .icon {
         color:$dark-color;
-        font-size: 1.5rem;
+        font-size: 1.333em;
         position: absolute;
-        left:0;
-        top:.333em;
+        left:.125em;
+        top:.125em;
       }
     }
   }
